@@ -1,0 +1,6 @@
+{
+  "dataset": "CE-B",
+  "definition": "paired robustness recapture of CE-A test tasks",
+  "source_dataset": "CE-A",
+  "source_split": "test"
+}

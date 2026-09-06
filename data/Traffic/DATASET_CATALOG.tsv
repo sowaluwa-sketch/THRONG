@@ -1,0 +1,9 @@
+dataset	label	groups	users	sessions
+Public	Malicious	1672	13057	14507
+Public	Other	1668	10259	16449
+CE-A	Malicious	2087	16646	109708
+CE-A	Other	2090	16700	110321
+CE-B	Malicious	1974	26599	102166
+CE-B	Other	1884	25466	98190
+External	Malicious	1572	11142	11193
+External	Other	1469	9521	11302

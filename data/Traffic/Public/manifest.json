@@ -1,0 +1,10 @@
+{
+  "dataset": "Public",
+  "groups": 3340,
+  "sessions": 30956,
+  "binary_counts": {
+    "Other": 1668,
+    "Malicious": 1672
+  },
+  "split_policy": "group-level assignments are provided in splits.tsv"
+}

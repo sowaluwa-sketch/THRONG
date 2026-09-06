@@ -1,0 +1,54 @@
+{
+  "dataset": "External",
+  "task": "binary malicious crowdsourcing detection",
+  "model_input": "sessions.tsv",
+  "session_schema": [
+    "session_id",
+    "group_id",
+    "user_id",
+    "destination_id",
+    "capture_start_ms",
+    "duration_ms",
+    "tls_record_count",
+    "c2s_record_count",
+    "s2c_record_count",
+    "c2s_record_bytes",
+    "s2c_record_bytes",
+    "signed_tls_record_lengths",
+    "record_interarrival_ms"
+  ],
+  "source_plan": [
+    {
+      "source": "ABOME_Malicious",
+      "selected_groups": 1572,
+      "minimum_windows": 4,
+      "selection": "stable deterministic ordering among groups meeting the window criterion; per-user/window session cap=2"
+    },
+    {
+      "source": "MapSwipe_Benign",
+      "selected_groups": 1469,
+      "minimum_windows": 4,
+      "selection": "stable deterministic ordering among groups meeting the window criterion; per-user/window session cap=2"
+    }
+  ],
+  "counts": {
+    "Malicious": {
+      "groups": 1572,
+      "users": 11142,
+      "sessions": 11193
+    },
+    "Other": {
+      "groups": 1469,
+      "users": 9521,
+      "sessions": 11302
+    }
+  },
+  "total": {
+    "groups": 3041,
+    "users": 20663,
+    "sessions": 22495
+  },
+  "split_policy": "group-level assignments are provided in splits.tsv",
+  "privacy": "raw source identifiers and raw CESNET SNI/IP values are not released; endpoint relations use anonymous stable digests",
+  "source_boundary": "Public and External are source-derived traffic artifacts. CESNET rows are real encrypted-flow metadata from the official CESNET-TLS-Year22 release, while CryptoBounty/ABOME/MapSwipe rows are source-faithful local TLS artifacts."
+}
